@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-hexbin/0.2.2/d3-hexbin.min.js"></script>
+	<script src="https://unpkg.com/@asymmetrik/leaflet-d3@4/dist/leaflet-d3.js" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+	<link rel="stylesheet" href="hexbinmap.css"/>
+</head>
+
+<body>
+	<div style="height: 60px; width: 1416px; padding-bottom: 10px">
+		<img style="float: right;" src="https://www.h-brs.de/files/logo_print_studierende.jpg" height="60px">
+	</div>
+	<!-- The map element -->
+	<div id="map" style="width: 1024px; height: 600px; float: left; margin-right: 1em; border: 1px solid #ccc"></div>
+	<div style="float: left; width: 380px">
+		<fieldset id="gw_select" class="ui-corner-all ui-widget ui-widget-content"><legend>Gateway</legend></fieldset>
+		<br>
+		<fieldset id="color_select" class="ui-corner-all ui-widget ui-widget-content"><legend>Colorize</legend></fieldset>
+		<br>
+		<fieldset class="ui-corner-all ui-widget ui-widget-content"><legend>Filter</legend>
+			<input type="text" id="data_filter" class="ui-corner-all ui-widget ui-widget-content" title="Available parameters:<br/><code>rpp</code>, <code>snr</code>, <code>sf</code>, <code>sensor</code>, <code>distance</code><br/>Examples:<br/><code>rssi < -123</code><br/><code>snr > 0</code>" size="20">
+			<a class="ui-button ui-corner-all" style="padding: .2em" id="apply_filter" href="#">Apply</a>
+			<a class="ui-button ui-corner-all" style="padding: .2em" id="clear_filter" href="#">Clear</a>
+			<div id="filter_error" class="ui-state-error ui-corner-all" style="padding: 0 .7em; margin-top: .3em; display: none;">
+				<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span><span id="filter_error_msg"></span></p>
+			</div>
+		</fieldset>
+		<br>
+		<!--
+		<fieldset class="ui-corner-all ui-widget ui-widget-content"><legend>Configuration</legend>
+			<label for="enable_screenshot_mode">Enable Screenshot Mode
+      			<input type="checkbox" name="enable_screenshot_mode" id="enable_screenshot_mode">
+    		</label>
+		</fieldset>
+		-->
+	</div>
+
+	<script src="hexbinmap.js"></script>
+</body>
+
+</html>

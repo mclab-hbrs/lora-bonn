@@ -1,0 +1,6 @@
+.settings
+.project
+.pydevproject
+.ipynb_checkpoints
+.vscode
+sensor/sources/build/

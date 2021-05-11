@@ -1,0 +1,73 @@
+.hexbin-hexagon {
+    stroke: #000;
+    stroke-width: .5px;
+}
+.hexbin-container:hover .hexbin-hexagon {
+    transition: 200ms;
+    stroke: orange;
+    stroke-width: 1px;
+    stroke-opacity: 1;
+}
+.hexbin-tooltip, .leaflet-tooltip {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid black;
+    background-color: white;
+}
+.info { 
+    padding: 6px 8px; 
+    font: 14px/16px Arial, Helvetica, sans-serif; 
+    background: white; 
+    background: rgba(255,255,255,0.8); 
+    box-shadow: 0 0 15px rgba(0,0,0,0.2); 
+    border-radius: 5px; 
+} 
+.info h4 {
+    margin: 0 0 5px; 
+    color: #777; 
+}
+.legend { 
+    text-align: left; 
+    line-height: 18px; 
+    color: #555; 
+} 
+.legend i {
+    width: 18px; 
+    height: 18px; 
+    float: left; 
+    margin-right: 8px; 
+    opacity: 0.7; 
+}
+.marker-pin {
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50% 50% 0;
+    background: #1e1597;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 50%;
+    top: 50%;
+    margin: -15px 0 0 -15px;
+}
+.marker-pin::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    margin: 3px 0 0 3px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;
+}
+.gw-icon i {
+    position: absolute;
+    width: 22px;
+    font-size: 22px;
+    left: 0;
+    right: 0;
+    margin: 10px auto;
+    text-align: center;
+}
+.gw-icon i.awesome {
+    margin: 14px auto;
+    font-size: 16px;
+}
